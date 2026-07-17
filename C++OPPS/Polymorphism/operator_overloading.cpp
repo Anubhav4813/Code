@@ -1,26 +1,30 @@
+// you cannot use ++ or -- operator directly on the objects of a class.
+// But you can overload these operators to use them on the objects of a class. this is operator overloading in c++.
+
 #include <iostream>
 using namespace std;
 
-class Box {
+class Channel {
+    int subscribers;
 public:
-    int items;
+    Channel(int s) {
+        subscribers = s;
+    }
 
-    Box(int count) : items(count) {}
+    void operator++() {
+        subscribers++;
+    }
 
-    // Adds a plain integer directly to the Box count
-    Box operator+(int extra_items) {
-        return Box(this->items + extra_items);
+    void display() {
+        cout << "Subscribers: " << subscribers << endl;
     }
 };
 
 int main() {
-    Box myBox(10);
-
-    // Using the overloaded + operator
-    Box updatedBox = myBox + 5;
-
-    cout << "Items in box: " << updatedBox.items << endl;
-    // Output: Items in box: 15
+    Channel c1(100);
+    c1.display();
+    ++c1; // Using the overloaded operator
+    c1.display();
 
     return 0;
 }
