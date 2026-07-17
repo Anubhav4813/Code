@@ -1,5 +1,7 @@
 // also known as dynamic polymorphism
 // function overriding
+
+// Yes, the virtual keyword is necessary in the base class to achieve standard object-oriented runtime polymorphism in C++.
 #include <iostream>
 using namespace std;
 
