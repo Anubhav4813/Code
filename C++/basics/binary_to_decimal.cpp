@@ -13,10 +13,8 @@ int binaryToDecimal(string num) {
         }
         base = base * 2;
     }
-
     return dec_value;
 }
-
 
 int main() {
     string binary_num = "11010100101"; // Example binary number
