@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Node.cpp"
+#include "Node.h"
 using namespace std;
 
 bool compare_lists(Node* head1, Node* head2) {
